@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>portofolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+
+        <div class="logo">
+             portofolio
+        </div>
+
+        <div class="menu">
+            <a href="#beranda">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#pesan-piqih">Pesan</a>
+            <a href="#kontak">Kontak</a>
+        </div>
+
+    </nav>
+
+
+    <!-- BERANDA -->
+    <section id="beranda">
+
+        <div class="container">
+
+            <div class="foto">
+                <img src="piqih.jpg" alt="Foto Piqih">
+            </div>
+
+            <h1>
+                Muhammad Fiqih Adriansyah
+            </h1>
+
+            <p>
+                Prodi Teknologi Informasi 💻
+            </p>
+
+            <button onclick="sayHello()">
+                Klik Untuk Emote 
+            </button>
+
+            <div id="pesan"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TENTANG -->
+    <section id="tentang">
+
+        <div class="biodata">
+
+            <h2>
+                Tentang Aku 
+            </h2>
+
+            <p>
+                👨 Nama: Muhammad Fiqih Adriansyah
+            </p>
+
+            <p>
+                🌐 Prodi: Teknologi Informasi
+            </p>
+
+            <p>
+                ⚡ NIM  :110022600077
+            </p>
+
+
+            <h2>
+                Hobi 
+            </h2>
+
+            <div class="hobi-container">
+
+                <div class="hobi-card">
+
+                    <div class="ikon">
+                        🦾
+                    </div>
+
+                    <h3>
+                        Olahraga
+                    </h3>
+
+                    <p>
+                        Aku suka bermain futsal.
+                    </p>
+
+                </div>
+
+
+                <div class="hobi-card">
+
+                    <div class="ikon">
+                        🎮
+                    </div>
+
+                    <h3>
+                        Game
+                    </h3>
+
+                    <p>
+                        Aku suka bermain Roblox.
+                    </p>
+
+                </div>
+
+
+                <div class="hobi-card">
+
+                    <div class="ikon">
+                        👥
+                    </div>
+
+                    <h3>
+                        Bersosialisasi
+                    </h3>
+
+                    <p>
+                        Aku suka mencari relasi dengan teman.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PESAN UNTUK PIQIH -->
+    <section id="pesan-piqih">
+
+        <div class="pesan-card">
+
+            <div class="Piqih">
+                @mhmdpiqih
+            </div>
+
+            <h2>
+                Fun Fact
+            </h2>
+
+            <p>
+                Suka Mencoba Hal Baru 
+            </p>
+
+            <p>
+                Suka Bersosialisasi dan Mencari Relasi 
+            </p>
+
+            <div class="hati-besar">
+                💡
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- KONTAK -->
+    <section id="kontak">
+
+        <div class="kontak">
+
+            <h2>
+                Hubungi Aku 📲
+            </h2>
+
+            <p>
+                Silakan isi pesan di bawah ini 
+            </p>
+
+            <form onsubmit="kirimPesan(event)">
+
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Nama kamu"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email kamu"
+                    required
+                >
+
+                <textarea
+                    id="pesanKontak"
+                    placeholder="Tulis pesan kamu..."
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Kirim Pesan 
+                </button>
+
+            </form>
+
+            <div id="hasilPesan"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Piqih 
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // Tombol Klik Aku
+        function sayHello() {
+
+            document.getElementById("pesan").innerHTML =
+                " Halo! Aku piqih 😆<br>" +
+                "Terima kasih sudah berkunjung!";
+
+            for (let i = 0; i < 10; i++) {
+
+                buatHati();
+
+            }
+
+        }
+
+
+        // Membuat hati jatuh
+        function buatHati() {
+
+            const hati =
+                document.createElement("div");
+
+            hati.innerHTML = "💕";
+
+            hati.classList.add("hati");
+
+            hati.style.left =
+                Math.random() * 100 + "vw";
+
+            hati.style.animationDuration =
+                (Math.random() * 2 + 2) + "s";
+
+            document.body.appendChild(hati);
+
+            setTimeout(function () {
+
+                hati.remove();
+
+            }, 4000);
+
+        }
+
+
+        // Form kontak
+        function kirimPesan(event) {
+
+            event.preventDefault();
+
+            const nama =
+                document.getElementById("nama").value;
+
+            document.getElementById("hasilPesan").innerHTML =
+                "💻   Terima kasih, " + nama + "!<br>" +
+                "Pesan kamu sudah diterima. 💻  ";
+
+            document.querySelector("form").reset();
+
+        }
+
+    </script>
+
+</body>
+
+</html>
