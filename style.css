@@ -1,0 +1,693 @@
+/* ========================= 
+   DASAR 
+========================= */ 
+ 
+* { 
+    box-sizing: border-box; 
+    scroll-behavior: smooth; 
+} 
+ 
+body { 
+    margin: 0; 
+ 
+    background: 
+        linear-gradient( 
+            135deg, 
+            #eaf4ff, 
+            #f7f9ff 
+        ); 
+ 
+    font-family: Arial, sans-serif; 
+ 
+    text-align: center; 
+ 
+    color: #3f4a5a; 
+} 
+ 
+ 
+/* ========================= 
+   NAVBAR 
+========================= */ 
+ 
+nav { 
+    position: sticky; 
+ 
+    top: 0; 
+ 
+    z-index: 1000; 
+ 
+    display: flex; 
+ 
+    justify-content: space-between; 
+ 
+    align-items: center; 
+ 
+    padding: 15px 30px; 
+ 
+    background-color: #496a9f; 
+ 
+    box-shadow: 
+        0 5px 15px 
+        rgba(60, 80, 110, 0.15); 
+} 
+ 
+.logo { 
+    color: white; 
+ 
+    font-size: 24px; 
+ 
+    font-weight: bold; 
+} 
+ 
+.menu { 
+    display: flex; 
+ 
+    gap: 20px; 
+} 
+ 
+.menu a { 
+    color: white; 
+ 
+    text-decoration: none; 
+ 
+    font-weight: bold; 
+ 
+    transition: 0.3s; 
+} 
+ 
+.menu a:hover { 
+    color: #dce9f8; 
+ 
+    transform: scale(1.1); 
+} 
+ 
+ 
+/* ========================= 
+   BERANDA 
+========================= */ 
+ 
+#beranda { 
+    min-height: 90vh; 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    justify-content: center; 
+ 
+    padding: 50px 20px; 
+} 
+ 
+.container { 
+    max-width: 500px; 
+ 
+    margin: auto; 
+} 
+ 
+ 
+/* ========================= 
+   FOTO 
+========================= */ 
+ 
+.foto { 
+    width: 150px; 
+ 
+    height: 150px; 
+ 
+    background-color: #7898c4; 
+ 
+    border-radius: 50%; 
+ 
+    display: flex; 
+ 
+    justify-content: center; 
+ 
+    align-items: center; 
+ 
+    margin: auto; 
+ 
+    overflow: hidden; 
+ 
+    animation: 
+        melayang 
+        3s 
+        ease-in-out 
+        infinite; 
+} 
+ 
+.foto img { 
+    width: 100%; 
+ 
+    height: 100%; 
+ 
+    object-fit: cover; 
+ 
+    border-radius: 50%; 
+} 
+ 
+ 
+/* ========================= 
+   JUDUL 
+========================= */ 
+ 
+h1 { 
+    color: #456b9a; 
+ 
+    font-size: 40px; 
+ 
+    margin-bottom: 10px; 
+ 
+    animation: 
+        muncul 
+        1.5s 
+        ease; 
+} 
+ 
+.container > p { 
+    font-size: 20px; 
+} 
+ 
+ 
+/* ========================= 
+   TOMBOL 
+========================= */ 
+ 
+button { 
+    margin-top: 25px; 
+ 
+    background-color: #526f9f; 
+ 
+    color: white; 
+ 
+    border: none; 
+ 
+    padding: 15px 30px; 
+ 
+    border-radius: 30px; 
+ 
+    font-size: 18px; 
+ 
+    cursor: pointer; 
+ 
+    transition: 0.3s; 
+} 
+ 
+button:hover { 
+    background-color: #6687b5; 
+ 
+    transform: scale(1.08); 
+} 
+ 
+ 
+/* ========================= 
+   PESAN 
+========================= */ 
+ 
+#pesan { 
+    margin-top: 20px; 
+ 
+    color: #4f709d; 
+ 
+    font-size: 20px; 
+ 
+    font-weight: bold; 
+} 
+ 
+ 
+/* ========================= 
+   TENTANG 
+========================= */ 
+ 
+#tentang { 
+    padding: 80px 20px; 
+} 
+ 
+.biodata { 
+    background-color: white; 
+ 
+    max-width: 600px; 
+ 
+    margin: auto; 
+ 
+    padding: 30px; 
+ 
+    border-radius: 20px; 
+ 
+    box-shadow: 
+        0 10px 30px 
+        rgba(60, 80, 110, 0.1); 
+} 
+ 
+.biodata h2 { 
+    color: #536f98; 
+ 
+    font-size: 30px; 
+ 
+    margin-top: 10px; 
+ 
+    margin-bottom: 20px; 
+} 
+ 
+.biodata > p { 
+    font-size: 18px; 
+ 
+    margin: 15px 0; 
+} 
+ 
+ 
+/* ========================= 
+   KARTU HOBI 
+========================= */ 
+ 
+.hobi-container { 
+    display: flex; 
+ 
+    gap: 15px; 
+ 
+    justify-content: center; 
+ 
+    margin-top: 25px; 
+ 
+    flex-wrap: wrap; 
+} 
+ 
+.hobi-card { 
+    background-color: #7898c4; 
+ 
+    width: 160px; 
+ 
+    padding: 20px 10px; 
+ 
+    border-radius: 18px; 
+ 
+    transition: 0.3s; 
+ 
+    border: 2px solid #dce9f8; 
+} 
+ 
+.hobi-card:hover { 
+    transform: translateY(-10px); 
+ 
+    background-color: #dce9f8; 
+ 
+    box-shadow: 
+        0 10px 20px 
+        rgba(80, 110, 150, 0.2); 
+} 
+ 
+.hobi-card .ikon { 
+    font-size: 40px; 
+} 
+ 
+.hobi-card h3 { 
+    color: #425f88; 
+ 
+    margin: 10px 0; 
+} 
+ 
+.hobi-card p { 
+    font-size: 14px; 
+ 
+    line-height: 1.5; 
+} 
+ 
+ 
+/* ========================= 
+   PESAN UNTUK PIQIH 
+========================= */ 
+ 
+#pesan-piqih { 
+    padding: 80px 20px; 
+} 
+ 
+.pesan-card { 
+    max-width: 600px; 
+ 
+    margin: auto; 
+ 
+    padding: 40px 30px; 
+ 
+    background: 
+        linear-gradient( 
+            135deg, 
+            #dbeafe, 
+            #f7f9ff 
+        ); 
+ 
+    border-radius: 30px; 
+ 
+    border: 3px solid white; 
+ 
+    box-shadow: 
+        0 15px 35px 
+        rgba(80, 110, 150, 0.2); 
+ 
+    transition: 0.3s; 
+} 
+ 
+.pesan-card:hover { 
+    transform: translateY(-5px); 
+ 
+    box-shadow: 
+        0 20px 40px 
+        rgba(80, 110, 150, 0.25); 
+} 
+ 
+.bintang { 
+    font-size: 25px; 
+ 
+    margin-bottom: 10px; 
+} 
+ 
+.pesan-card h2 { 
+    color: #536f98; 
+ 
+    font-size: 30px; 
+ 
+    margin-bottom: 20px; 
+} 
+ 
+.pesan-card p { 
+    font-size: 18px; 
+ 
+    line-height: 1.7; 
+ 
+    color: #4f5866; 
+} 
+ 
+.hati-besar { 
+    font-size: 60px; 
+ 
+    margin-top: 20px; 
+ 
+    animation: 
+        detak 
+        1.2s 
+        ease-in-out 
+        infinite; 
+} 
+ 
+ 
+/* ========================= 
+   KONTAK 
+========================= */ 
+ 
+#kontak { 
+    padding: 80px 20px; 
+} 
+ 
+.kontak { 
+    background-color: white; 
+ 
+    max-width: 500px; 
+ 
+    margin: auto; 
+ 
+    padding: 30px; 
+ 
+    border-radius: 20px; 
+ 
+    box-shadow: 
+        0 10px 30px 
+        rgba(60, 80, 110, 0.1); 
+} 
+ 
+.kontak h2 { 
+    color: #5b8790; 
+ 
+    font-size: 30px; 
+} 
+ 
+ 
+/* ========================= 
+   FORM 
+========================= */ 
+ 
+form { 
+    margin-top: 25px; 
+ 
+    display: flex; 
+ 
+    flex-direction: column; 
+ 
+    gap: 15px; 
+} 
+ 
+form input, 
+form textarea { 
+    width: 100%; 
+ 
+    padding: 15px; 
+ 
+    border: 2px solid #dce9f8; 
+ 
+    border-radius: 12px; 
+ 
+    font-size: 16px; 
+ 
+    font-family: Arial, sans-serif; 
+ 
+    outline: none; 
+ 
+    transition: 0.3s; 
+} 
+ 
+form input:focus, 
+form textarea:focus { 
+    border-color: #7898c4; 
+ 
+    box-shadow: 
+        0 0 10px 
+        rgba(100, 130, 170, 0.15); 
+} 
+ 
+form textarea { 
+    height: 120px; 
+ 
+    resize: none; 
+} 
+ 
+form button { 
+    width: 100%; 
+ 
+    margin-top: 5px; 
+} 
+ 
+#hasilPesan { 
+    margin-top: 20px; 
+ 
+    color: #587aa5; 
+ 
+    font-weight: bold; 
+ 
+    line-height: 1.6; 
+} 
+ 
+ 
+/* ========================= 
+   FOOTER 
+========================= */ 
+ 
+footer { 
+    background-color: #496a9f; 
+ 
+    color: white; 
+ 
+    padding: 20px; 
+ 
+    margin-top: 30px; 
+} 
+ 
+footer p { 
+    margin: 0; 
+} 
+ 
+ 
+/* ========================= 
+   ANIMASI 
+========================= */ 
+ 
+@keyframes melayang { 
+ 
+    0% { 
+        transform: translateY(0); 
+    } 
+ 
+    50% { 
+        transform: translateY(-10px); 
+    } 
+ 
+    100% { 
+        transform: translateY(0); 
+    } 
+ 
+} 
+ 
+ 
+@keyframes muncul { 
+ 
+    from { 
+        opacity: 0; 
+ 
+        transform: 
+            translateY(-20px); 
+    } 
+ 
+    to { 
+        opacity: 1; 
+ 
+        transform: 
+            translateY(0); 
+    } 
+ 
+} 
+ 
+ 
+@keyframes detak { 
+ 
+    0% { 
+        transform: scale(1); 
+    } 
+ 
+    50% { 
+        transform: scale(1.2); 
+    } 
+ 
+    100% { 
+        transform: scale(1); 
+    } 
+ 
+} 
+ 
+ 
+/* ========================= 
+   HATI JATUH 
+========================= */ 
+ 
+.hati { 
+    position: fixed; 
+ 
+    top: -50px; 
+ 
+    font-size: 30px; 
+ 
+    pointer-events: none; 
+ 
+    animation: 
+        jatuh 
+        3s 
+        linear 
+        forwards; 
+} 
+ 
+@keyframes jatuh { 
+ 
+    0% { 
+        transform: 
+            translateY(0) 
+            rotate(0deg); 
+ 
+        opacity: 1; 
+    } 
+ 
+    100% { 
+        transform: 
+            translateY(110vh) 
+            rotate(360deg); 
+ 
+        opacity: 0; 
+    } 
+ 
+} 
+ 
+ 
+/* ========================= 
+   RESPONSIVE HP 
+========================= */ 
+ 
+@media (max-width: 600px) { 
+ 
+    nav { 
+        padding: 15px; 
+ 
+        flex-direction: column; 
+ 
+        gap: 10px; 
+    } 
+ 
+    .logo { 
+        font-size: 22px; 
+    } 
+ 
+    .menu { 
+        gap: 12px; 
+ 
+        flex-wrap: wrap; 
+ 
+        justify-content: center; 
+    } 
+ 
+    .menu a { 
+        font-size: 14px; 
+    } 
+ 
+    #beranda { 
+        min-height: 85vh; 
+ 
+        padding: 40px 15px; 
+    } 
+ 
+    .foto { 
+        width: 120px; 
+ 
+        height: 120px; 
+    } 
+ 
+    h1 { 
+        font-size: 30px; 
+    } 
+ 
+    .container > p { 
+        font-size: 17px; 
+    } 
+ 
+    .biodata, 
+    .kontak { 
+        padding: 20px; 
+    } 
+ 
+    .biodata h2, 
+    .kontak h2 { 
+        font-size: 25px; 
+    } 
+ 
+    .biodata > p, 
+    .kontak p { 
+        font-size: 16px; 
+    } 
+ 
+    button { 
+        padding: 13px 25px; 
+ 
+        font-size: 16px; 
+    } 
+ 
+    .hobi-card { 
+        width: 100%; 
+ 
+        max-width: 250px; 
+    } 
+ 
+    .pesan-card { 
+        padding: 30px 20px; 
+    } 
+ 
+    .pesan-card h2 { 
+        font-size: 25px; 
+    } 
+ 
+    .pesan-card p { 
+        font-size: 16px; 
+    } 
+ 
+}
